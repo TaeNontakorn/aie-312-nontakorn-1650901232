@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> 4EVE Website </title> 
+
+    <style>
+        /* รีเซ็ตค่าเริ่มต้น */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #efbbdc;
+        }
+
+        /* แทปบน (header) */
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between; /* จัดการให้เมนูและลิงก์อื่นๆ แยกกัน */
+            align-items: center; /* จัดกึ่งกลางแนวตั้ง */
+        }
+
+        /* เมนู */
+        header .menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
+
+        header .menu li {
+            display: inline;
+        }
+
+        header .menu li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+        }
+
+        header .menu li a:hover {
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        /* สไตล์ลิงก์ Search และ Log In */
+        .S_and_L {
+            gap: 20px;
+        }
+
+        .S_and_L a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .S_and_L a:hover {
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px 20px;
+        }
+
+        /* ส่วนของ Section */
+        section {
+            display: flex;
+            flex-direction: column;
+            margin: 20px 0;
+            align-items: center; /* จัดทุกองค์ประกอบให้อยู่กึ่งกลางในแนวตั้ง */
+        }
+
+        .foureve h1 {
+            font-size: 100px; /* ขนาดตัวอักษร */
+            margin-bottom: 30px;
+        }
+
+        /* จัดรูปให้เรียงเป็นแถวแนวนอน */
+        section img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* เลย์เอาต์รูปภาพแบบ Flexbox */
+        section > div {
+            display: flex;
+            flex-wrap: wrap; /* ทำให้รูปสามารถย่อขนาดได้ */
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+
+        /* สไตล์ตัวอักษรใต้รูป */
+        section div p {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between; /* จัดระยะห่างระหว่างองค์ประกอบ */
+            align-items: center;
+        }
+
+        .scroll-button {
+            margin-left: auto; /* ให้ปุ่มไปอยู่ทางขวาสุด */
+        }
+
+        .scroll-button button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            border-radius: 30px;
+        }
+
+    </style>   
+</head>
+
+<body>
+    <!--แทปบน-->
+    <header> 
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Member</a></li>
+            <li><a href="#">Album</a></li>
+            <li><a href="#">Concert</a></li>
+            <li><a href="#">Merchandise</a></li>
+        </ul>
+        <div class="S_and_L">
+            <a href="#">Search</a>
+            <a href="#">Log In</a>
+        </div>
+    </header>
+    
+    <!--ส่วนของ 4EVE และปุ่ม Scroll Down-->
+    <section class="banner">
+        <div class="container">
+            <div class="foureve">
+                <h1>4EVE</h1>
+            </div>
+            <div class="scroll-button">
+                <button>Scroll Down</button>
+            </div>
+        </div>
+    </section>
+
+    <!--รูป-->
+    <section>
+        <div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=qGh94oGQziw"><img src="https://pbs.twimg.com/media/GGbqGmVa4AA7vL7.jpg" alt="Hot2Hot"></a>
+                <p>Hot2Hot</p>            
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=WT_tZuDUpn8"><img src="https://www.music24s.com/wp-content/uploads/2023/07/975391aa9f1e5a701f65930f32ecd018.1000x1000x1.jpg" alt="หยดน้ำตา"></a>
+                <p>หยดน้ำตา</p>            
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=Y0kAhwwjawc"><img src="https://cdn.spacebar.th/407972819_848890797246138_338787227760550446_n_73bab27bb8.jpg" alt="VROOM VROOM"></a>
+                <p>VROOM VROOM</p>            
+            </div>
+            <div>
+                <a href="https://www.youtube.com/watch?v=aUs0Y0vGgW0"><img src="https://f.ptcdn.info/361/084/000/seg23z1rw8npET7ExLSWu-o.jpg" alt="Situationship"></a>
+                <p>Situationship</p>            
+            </div>
+        </div>
+    </section>
+</body>
+</html>
